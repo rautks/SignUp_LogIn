@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>SignUp Page</title>
+<link rel="stylesheet" type="text/css" href="css/signUp.css">
+	 
+ <!-- Unicons -->
+    <script src="https://kit.fontawesome.com/7a9aa7faae.js" crossorigin="anonymous"></script>
+</head>
+<body class="home">
+		<div onsubmit="return sweetalert()">
+		<input type="hidden" id="status" value="request.getAttribute(status)"></div>
+	<div>
+		<section class="form_container">
+			<div class="form_signup">
+          <form method="post" action="signUp">
+            <h2 class="container_h2">Signup</h2>
+
+            <div class="input_box">
+              <input type="email" name="userName" placeholder="Enter your User Name" required />
+              <i class="fa-regular fa-envelope"></i>
+            </div>
+            <div class="input_box" onsubmit="return password()">
+              <input type="password" name="password" id="password" value="" placeholder="Create password" required />
+              <span id="pass" ></span>
+              <i class="fa-solid fa-lock"></i>
+            </div>
+            </div>
+			<div class="input_box" onsubmit="return firstName()">
+              <input type="text" name="firstName" id="firstname" value="" placeholder="Enter your First Name" required />
+              <span id="fname"></span>
+              <i class="fa-regular fa-user"></i>
+            </div>
+            <div class="input_box" onsubmit="return lastName()">
+              <input type="text" name="lastName" id="lastName" placeholder="Enter your Last Name" required />
+              <span id="lasname"></span>
+              <i class="fa-regular fa-user"></i>
+            </div>
+            <div class="input_box">
+              <input type="date" name="dob" placeholder="Date-of-Birthday" required />
+            </div>
+            <div class="input_box">
+              <input type="text" name="address" placeholder="Enter Your Address" required enterkeyhint="next" />
+              <i class="fa-solid fa-house"></i>
+            </div>
+             <div class="input_box">
+              <input type="number" name="postalcode" placeholder="Enter Your Address" required />
+            </div> 
+			<div class="input_box" onsubmit="return myPhone()">
+              <input type="text" name="phoneNumber" id="phone" placeholder="123-456-7890" required />
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <button class="button">Signup Now</button>
+            
+            <div class="signup">Already have an account? <a href="logIn.html" id="login">Login</a></div>
+          </form><br>
+        </div>
+		</section>
+	</div>
+	<!-- Script -->
+	<script src="js/signUp.js"></script>
+	<script src="sweetalert2.min.js">
+		Swal.fire({
+		  position: 'top-end',
+		  icon: 'success',
+		  title: 'Account Created Successfully in Audilytic',
+		  showConfirmButton: false,
+		  timer: 1500
+		})
+	</script>
+	<link rel="stylesheet" href="sweetalert2.min.css">
+</body>
+</html>

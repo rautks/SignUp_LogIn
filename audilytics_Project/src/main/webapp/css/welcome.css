@@ -1,0 +1,21 @@
+@charset "UTF-8";
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.all{
+	background: #FA58D0;
+  	margin-top: 30px;
+  	margin-left:40%;
+  	width: 20%;
+  	padding: 10px 0;
+  	border-radius: 10px;
+}
+.record_h2 {
+  margin-top:10px;
+  font-size: 22px;
+  color: #2E64FE;
+  text-align: center;
+}
